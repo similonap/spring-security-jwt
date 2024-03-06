@@ -48,7 +48,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String jwt = null;
         String username = null;
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-            // First check if it is in the cookie, if not just pass it on
             if (request.getCookies() != null) {
                 for (var cookie : request.getCookies()) {
                     if (cookie.getName().equals("JWT_TOKEN"))

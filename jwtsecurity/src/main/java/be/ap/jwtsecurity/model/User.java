@@ -1,7 +1,6 @@
 package be.ap.jwtsecurity.model;
 
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -10,8 +9,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -36,7 +33,6 @@ public class User implements UserDetails {
     public User() {
 
     }
-
 
     public User(String username, String password, String role) {
         this.username = username;
